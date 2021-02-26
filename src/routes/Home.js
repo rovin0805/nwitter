@@ -49,6 +49,8 @@ const Home = ({ userObj }) => {
     await dbService.collection("nweets").add(nweetObj);
     setNweet("");
     setattAchment("");
+    const fileUpload = document.querySelector('input[type="file"]');
+    fileUpload.value = "";
   };
 
   const onChange = (event) => {
